@@ -33,7 +33,7 @@ var Util = {
         newRawValue = this.stripDelimiters(newValue.slice(0, prevPos), delimiter, delimiters);
         lengthOffset = oldRawValue.length - newRawValue.length;
 
-        return (lengthOffset !== 0) ? (lengthOffset / Math.abs(lengthOffset)) : 0;
+        return (lengthOffset > 0) ? (lengthOffset / Math.abs(lengthOffset)) : 0;
     },
 
     stripDelimiters: function (value, delimiter, delimiters) {
